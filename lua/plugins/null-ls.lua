@@ -7,12 +7,16 @@ return {
       local nls = require("null-ls")
       return {
         sources = {
-          -- nls.builtins.formatting.prettierd,
+          nls.builtins.code_actions.eslint,
+          nls.builtins.code_actions.proselint,
+          nls.builtins.formatting.prettierd,
           nls.builtins.formatting.stylua,
-          nls.builtins.diagnostics.flake8,
           nls.builtins.diagnostics.terraform_validate,
           nls.builtins.diagnostics.tfsec,
           nls.builtins.formatting.terraform_fmt,
+          nls.builtins.code_actions.shellcheck,
+          nls.builtins.formatting.beautysh,
+          nls.builtins.formatting.shfmt,
         },
       }
     end,
